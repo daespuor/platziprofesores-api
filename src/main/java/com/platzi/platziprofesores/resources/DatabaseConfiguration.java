@@ -29,11 +29,13 @@ public class DatabaseConfiguration {
 	public DataSource dataSource() {
 		DriverManagerDataSource managerDataSource= new DriverManagerDataSource();
 		managerDataSource.setDriverClassName("com.mysql.jdbc.Driver");
-		managerDataSource.setUsername("platziprofesores");
-		managerDataSource.setUrl("jdbc:mysql://localhost:3306/platziprofesores?useUnicode=true&useJDBCCompliantTimezoneShift=true&useLegacyDatetimeCode=false&serverTimezone=UTC");
-		managerDataSource.setPassword("platziprofesores");
+		//managerDataSource.setUsername("platziprofesores");
+		//managerDataSource.setUrl("jdbc:mysql://localhost:3306/platziprofesores?useUnicode=true&useJDBCCompliantTimezoneShift=true&useLegacyDatetimeCode=false&serverTimezone=UTC");
+		//managerDataSource.setPassword("platziprofesores");
 		//managerDataSource.setConnectionProperties(getProperties());
-		
+		managerDataSource.setUsername("bfd149d4b8e8f2");
+		managerDataSource.setUrl("jdbc:mysql://us-cdbr-iron-east-01.cleardb.net/heroku_9d53eb853c1a346");
+		managerDataSource.setPassword("9e3e44c4");
 		return managerDataSource;
 	}
 	
