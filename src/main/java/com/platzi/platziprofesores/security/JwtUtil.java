@@ -25,7 +25,11 @@ public class JwtUtil {
 		res.setHeader("Authorization", "Bearer "+token);
 	}
 	
-	public static Authentication getAuthentication(HttpServletRequest req) {
+	public static Authentication getAuthentication(HttpServletRequest req, HttpServletResponse res) {
+		
+		res.setHeader("Access-Control-Allow-Origin","*");
+		res.setHeader('Access-Control-Allow-Headers','Origin, X-Request-With, Content-Type, Accept, Authorization');
+        res.setHeader('Access-Control-Allow-Methods','GET,POST,DELETE,OPTIONS,PATCH');
 		String token= req.getHeader("Authorization");
 		if(token!=null) {
 			String username=Jwts.parser()
