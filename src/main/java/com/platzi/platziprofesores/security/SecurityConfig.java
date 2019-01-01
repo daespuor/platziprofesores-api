@@ -19,7 +19,7 @@ public class SecurityConfig extends WebSecurityConfigurerAdapter{
 			.and()
 			.addFilterBefore(new LoginFilter("/login",authenticationManager()),
 					UsernamePasswordAuthenticationFilter.class);
-			//.addFilterBefore(new JwtFilter(), UsernamePasswordAuthenticationFilter.class);
+			.addFilterBefore(new JwtFilter(), UsernamePasswordAuthenticationFilter.class);
 	}
 	
 	@Override
