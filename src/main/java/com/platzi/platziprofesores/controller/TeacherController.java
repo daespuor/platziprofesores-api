@@ -100,7 +100,7 @@ public class TeacherController {
 			return new ResponseEntity(new CustomErrorType("El profesor debe existir"),HttpStatus.NOT_FOUND);
 		}
 		
-		currentTeacher.setAvatar(teacher.getAvatar());
+		//currentTeacher.setAvatar(teacher.getAvatar());
 		currentTeacher.setName(teacher.getName());
 		
 		_teacherService.update(currentTeacher);
