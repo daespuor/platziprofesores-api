@@ -175,7 +175,9 @@ public class TeacherController {
 			return ResponseEntity.ok().contentType(MediaType.IMAGE_JPEG).body(bytes);
 		}catch(Exception e) {
 			e.printStackTrace();
-			return new ResponseEntity(new CustomErrorType("Ocurrio un error al consultar imagen :"+e.getMessage()),HttpStatus.BAD_REQUEST);
+			Path path= Paths.get('image/teachers/not_found.png');
+			byte[] bytes= Files.readyAllBytes(path);
+			return ResponseEntity.ok().contentType(MediaType.IMAGE_JPEG).body(bytes);
 		}
 	}
 	
