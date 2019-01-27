@@ -177,7 +177,7 @@ public class TeacherController {
 			e.printStackTrace();
 			String filePath="images/teachers/not_found.png";
 			Path path= Paths.get(filePath);
-			byte[] bytes= Files.readyAllBytes(path);
+			byte[] bytes= Files.readAllBytes(path);
 			return ResponseEntity.ok().contentType(MediaType.IMAGE_JPEG).body(bytes);
 		}
 	}
