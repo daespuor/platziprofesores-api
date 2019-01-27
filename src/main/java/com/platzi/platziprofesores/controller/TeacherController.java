@@ -160,7 +160,7 @@ public class TeacherController {
 	}
 	
 	@RequestMapping(value="/teachers/{id_teacher}/picture",method=RequestMethod.GET)
-	public ResponseEntity<byte[]> getImage(@PathVariable("id_teacher") Long idTeacher){
+	public ResponseEntity<byte[]> getImage(@PathVariable("id_teacher") Long idTeacher) throws Exception{
 		if(idTeacher==null || idTeacher<=0) {
 			return new ResponseEntity(new CustomErrorType("idTeacher invalido"),HttpStatus.BAD_REQUEST);
 		}
